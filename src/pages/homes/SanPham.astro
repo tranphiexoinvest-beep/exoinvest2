@@ -1,0 +1,393 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+
+import { headerData } from '~/navigation';
+//import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'Trang Sản Phẩm',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Đăng nhập',
+          href: '#',
+        },
+        /*{
+          variant: 'primary',
+          text: 'Sign Up',
+          href: '#',
+        },*/
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline=""
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Mua Phiếu Giao Hàng', href: 'https://github.com/onwidget/astrowind' },
+      { text: 'Tìm Hiểu Mô Hình Kinh Doanh', href: '#features' },
+    ]}
+    image={{
+      src: '~/assets/images/Cana_2.jpg',
+      alt: 'Bộ sản phẩm nước mắm CANA',
+    }}
+  >
+    <Fragment slot="title">
+      Gói sản phẩm<br> <span class="text-accent dark:text-white"
+        >Nước Nắm CANA</span
+      >
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Sản phẩm nước mắm truyền thống CANA – 12°N & 42°N – không chỉ là lựa chọn tuyệt hảo cho bữa ăn, mà còn là cánh cửa bước vào hệ sinh thái kinh doanh – đầu tư thông minh của <span class="font-semibold">EXO Invest</span>.
+      <span class="hidden sm:inline">
+        Mua sản phẩm, nhận quyền phát triển kinh doanh, và hưởng hoa hồng lên tới <span class="font-semibold">20%</span></span
+      >
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Vì sao chọn Nước Mắm CANA?"
+    subtitle="Nước Mắm Truyền Thống CANA – Không Chỉ Là Gia Vị, Mà Là Giá Trị Sống"
+    columns={2}
+    items={[
+      {
+        title: 'Chất lượng thượng hạng:',
+        description:
+          'Sản xuất từ cá cơm tươi ủ chượp truyền thống, đạt chuẩn vệ sinh an toàn thực phẩm.',
+        icon: 'tabler:layers-union',
+      },
+      {
+        title: 'Hàm lượng đạm chuẩn:',
+        description: `12°N cho nhu cầu hàng ngày – 42°N đậm vị dành cho thưởng thức & biếu tặng.`,
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Giá niêm yết minh bạch:',
+        description:
+          'Áp dụng thống nhất toàn quốc, đã bao gồm VAT.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Quyền kinh doanh ngay:',
+        description: `Sở hữu Phiếu Giao Hàng để bắt đầu hành trình Affiliate Marketing cùng EXO Invest.`,
+        icon: 'tabler:podium',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Mua Sản Phẩm – Nhận Quyền Kinh Doanh"
+    subtitle="Chỉ cần sở hữu 1 Phiếu Giao Hàng, bạn sẽ có ngay đường link Affiliate cá nhân để giới thiệu sản phẩm và nhận hoa hồng theo doanh số."
+    isReversed
+    items={[
+      {
+        title: 'Doanh số 5,34 triệu – 260 triệu VNĐ: ',
+        description:
+          'Chiết khấu trực tiếp 10% giá trị đơn hàng',
+      },
+      {
+        title: 'Doanh số 260 triệu – 1,3 tỷ VNĐ',
+        description: `Chiết khấu trực tiếp 10% giá trị đơn hàng và gián tiếp 4% giá trị đơn hàng`,
+      },
+            {
+        title: 'Doanh số trên 1,3 tỷ VNĐ:',
+        description: 'Chiết khấu trực tiếp 10% giá trị đơn hàng và gián tiếp 8% giá trị đơn hàng <br> Thưởng thêm 2% khi trong hệ thống có thành viên đạt 1,3 tỷ VNĐ doanh số.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
+      alt: 'Startup Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Chiết khấu hoa hồng:<br /><span class="text-2xl">Nhận trực tiếp khi phát sinh đơn mua hàng</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Hoa hồng tối đa 20%',
+        description: `Bạn được hưởng mức hoa hồng hấp dẫn nhất thị trường, kèm theo điểm thưởng và token trong hệ sinh thái EXO Invest. Token này có thể dùng để giao dịch, mua sản phẩm hoặc tích lũy như một tài sản đầu tư lâu dài.`,
+      },
+      {
+        title: 'Cơ hội trở thành cổ đông sáng lập',
+        description: `Khi đạt các mốc KPI quan trọng, bạn sẽ được tham gia chương trình đặc biệt trở thành cổ đông sáng lập. Điều này mang lại quyền hưởng lợi tức hàng năm và tham gia định hướng chiến lược của công ty.`,
+      },
+      {
+        title: 'Thu nhập thụ động bền vững',
+        description: `Hệ thống hoa hồng nhóm giúp bạn tạo dòng tiền đều đặn, ngay cả khi không trực tiếp bán hàng. Chỉ cần xây dựng đội nhóm vững mạnh, bạn sẽ hưởng lợi lâu dài từ doanh số của toàn hệ thống.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+      alt: 'SaaS Businesses Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Các quyền lợi khác <br /><span class="text-2xl"></span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Đào tạo chuyên sâu',
+        description: `Được tham gia các khóa học nội bộ về kỹ năng kinh doanh, tiếp thị, quản lý tài chính cá nhân, xây dựng thương hiệu và lãnh đạo đội nhóm – giúp bạn phát triển toàn diện cả về kiến thức và kỹ năng.`,
+      },
+      {
+        title: 'Hỗ trợ 24/7',
+        description: `Luôn có đội ngũ cố vấn và cộng đồng thành viên đồng hành, chia sẻ kinh nghiệm, hướng dẫn từng bước để bạn dễ dàng đạt doanh số và phát triển mạng lưới.`,
+      },
+      {
+        title: 'Gia tăng giá trị tài sản',
+        description: `Ngoài thu nhập hàng tháng, bạn còn tích lũy được token và các quyền lợi dài hạn, giúp gia tăng tài sản và mở ra cơ hội đầu tư sinh lời cao trong tương lai.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Portfolio Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Các quyền lợi khác <br /><span class="text-2xl"></span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <!--<Content
+    items={[
+      {
+        title: 'Description:',
+        description: `For small businesses, a well-crafted website can be a game-changer. AstroWind empowers small businesses to not only establish a credible online presence but also convert visitors into loyal customers. The template's thoughtful design and optimization features ensure that your website doesn't just attract attention but also guides visitors through a seamless journey, ultimately leading to conversions.`,
+      },
+      {
+        title: 'Benefits:',
+        description: `Present your small business with a professional and polished website that instills confidence and trust among visitors. <br /> Strategically placed CTAs, user-friendly forms, and optimized layouts work together to drive user engagement and conversions. <br /> Ensure a smooth browsing experience, reducing bounce rates and encouraging interaction.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Small Business Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Small business growth: <br /><span class="text-2xl">Converting visitors into customers</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content> -->
+
+  <!-- Pricing Widget ******************* -->
+
+  <Pricing
+    title="Gói Sản Phẩm – 1 Phiếu Giao Hàng"
+    subtitle="Giá trọn gói: <span class: 'text-accent dark:text-white'>5.340.000 VNĐ</span> (đã bao gồm VAT, chưa gồm phí vận chuyển)."
+    prices={[
+      {
+        title: 'Nước mắm Cana 12°N',
+        subtitle: 'Can Pet 2L',
+        price: '12 Lit',
+        period: '/ 6 Can',
+        /*callToAction: {
+          target: '_blank',
+          text: 'Get Started for Free',
+          href: '#',
+        },*/
+      },
+      {
+        title: 'Nước mắm Cana 42°N',
+        subtitle: 'Chai thủy tinh 250ml (hộp 4 chai)',
+        price: '12 Lit',
+        period: '/ 48 Chai',
+        callToAction: {
+          target: '_blank',
+          text: 'Đặt hàng ngay',
+          href: '#',
+        },
+        hasRibbon: true,
+        //ribbonTitle: 'popular',
+      },
+      {
+        title: 'Nước mắm Cana 42°N',
+        subtitle: 'Chai thủy tinh 50ml (hộp 12 chai)',
+        price: '3 Lit',
+        period: '/ 60 Chai',
+        /*callToAction: {
+          target: '_blank',
+          text: 'Unlock Enterprise Features',
+          href: '#',
+        },*/
+      },
+    ]}
+      />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Quy trình mua hàng"
+    items={[
+      {
+        title: 'Bước 1: <span class="font-medium">Cài đặt ứng dụng mua hàng</span>',
+        description:
+          "1. Tải ứng dụng GlobeDr trên App Store (IOS) hoặc CH-Play (Android).<br>2. Đăng ký và KYC tài khoản GlobeDr",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Bước 2: <span class="font-medium">Mua hàng và thanh toán</span>',
+        description:
+          "1. Tiến hành mua hàng qua liên kết người giới thiệu.<br>2. Chuyển khoản thanh toán theo yêu cầu trên trang mua hàng",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Bước 3: <span class="font-medium">Kích hoạt tài khoản đối tác</span>',
+        description:
+          '1. Xác nhận kích hoạt tài khoản Affiliate qua email đã đăng ký.<br>2. Đăng nhập bằng số CCCD và mật khẩu được đính kèm trong mail.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Bước 4: (Tùy chọn) <span class="font-medium">Tạo yêu cầu giao hàng</span>',
+        description:
+          '1. Đăng nhập vào trang quản lý tài khoản Affiliate và tạo yêu cầu giao hàng.<br>2. Nếu giữ phiếu giao hàng nước mắm CANA để đầu tư thì không cần tạo yêu cầu giao hàng.',
+        icon: 'tabler:check',
+      },
+    ]}
+    callToAction={{
+      text: 'See more',
+      href: '/',
+    }}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!--<FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'Is AstroWind compatible with the latest versions of Astro and Tailwind CSS?',
+        description:
+          'Yes, AstroWind is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroWind.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Can I use AstroWind for both personal and commercial projects?',
+        description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'What level of coding knowledge is required to use AstroWind?',
+        description:
+          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Is customer support available for AstroWind users seeking guidance?',
+        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs> -->
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Liên hệ với chúng tôi"
+    subtitle="Bạn có câu hỏi? Hãy liên hệ với chúng tôi qua cộng đồng bên dưới. Chúng tôi luôn sẵn sàng hỗ trợ bạn!"
+    callToAction={{
+      text: 'Nhóm Cộng Đồng',
+      href: 'https://zalo.me/g/cvjyuf753',
+    }}
+    items={[
+      {
+        title: 'Email',
+        description: 'info@exoinvest.vn',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Số điện thoại',
+        description: '+84.931.437.682',
+        icon: 'tabler:headset',
+      },
+      /*{
+        title: 'Follow us',
+        description: '@example',
+        icon: 'tabler:brand-twitter',
+      },*/
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Khám phá thêm nội dung trong Blog"
+    information={`Blog của EXO Invest chia sẻ kiến thức, kinh nghiệm và phân tích thị trường mới nhất. Mỗi bài viết sẽ giúp bạn nâng cao kỹ năng đầu tư và cập nhật xu hướng tài chính. Hãy khám phá để tích lũy thêm kiến thức và cơ hội đầu tư thông minh.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

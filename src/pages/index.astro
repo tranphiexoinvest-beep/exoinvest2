@@ -1,0 +1,379 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+//import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import imgLight from '~/assets/images/HeSinhThaiEXO_light.png';
+import imgDark from '~/assets/images/HeSinhThaiEXO_dark.png';
+
+const metadata = {
+  title: 'EXO Invest — Số hóa sản phẩm nông nghiệp việt',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Tìm hiểu ngay',
+      href: 'https://exoinvest.vn',
+      target: '_blank',
+    },
+    { text: 'Gia nhập cộng đồng', href: 'https://zalo.me/g/cvjyuf753' },
+  ]}
+  
+  image={{
+    light: imgLight,
+    dark: imgDark,
+    alt: 'Hình Hệ sinh thái EXO'
+  }}
+  
+>
+    <Fragment slot="title">
+      Kiến tạo hệ sinh thái <br>
+      <span class="text-accent dark:text-white">Số hóa - Sức khỏe - Tài chính</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">EXO Invest</span> tiên phong kết hợp thương mại điện tử, số hóa sản phẩm tiêu dùng và đào tạo tài chính thực chiến, hướng đến cộng đồng đầu tư an toàn – bền vững – hiện đại.</span
+      ><br>
+      <!--<span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
+      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
+      Blogs. -->
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Số hóa:" description="Là xu hướng, là bước phát triển của nền nông nghiệp tương lai" />
+
+    <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Năm kinh nghiệm', amount: '5+' },
+      { title: 'Thành viên cộng đồng', amount: '10,000+' },
+      { title: 'Đối tác chiến lược', amount: '50+' },
+      { title: 'Mảnh ghép hệ sinh thái', amount: '7' },
+    ]}
+  />
+
+  
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Giới thiệu"
+    title="Về Chúng Tôi"
+    items={[
+      {
+        title: 'Hệ sinh thái đầu tư đa lĩnh vực:',
+        description:
+          'Hoạt động trong tài chính, nông nghiệp, sản phẩm truyền thống và công nghệ, quy tụ đội ngũ giàu kinh nghiệm gồm chuyên gia, nhà đầu tư, doanh nhân và startup đầy nhiệt huyết.',
+        },
+      {
+        title: 'Cộng đồng kết nối và phát triển:',
+        description:
+          'Nơi gắn kết nhà đầu tư – doanh nghiệp – chuyên gia – người khởi nghiệp, cùng chia sẻ cơ hội và kiến tạo giá trị bền vững.',
+      },
+      {
+        title: 'Nguyên tắc hoạt động rõ ràng:',
+        description:
+          'Mọi dự án đều được thẩm định nghiêm ngặt về chất lượng, tiềm năng tăng trưởng, tác động tích cực đến cộng đồng và môi trường, đảm bảo minh bạch – hiệu quả – trách nhiệm xã hội.',
+      },
+      {
+        title: 'Tạo giá trị song hành lợi nhuận:',
+        description:
+          'Mang đến cơ hội sinh lời bền vững thông qua các dự án tiêu biểu, từ sản phẩm truyền thống như <strong>Nước mắm CANA</strong> đến giải pháp công nghệ đầu tư thông minh.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Cty_EXO1.jpg',
+      alt: 'Hình Công Ty EXO',
+    }}
+  >
+    <Fragment slot="content">Chúng tôi là ai?</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Nước mắm CANA',
+        description: `Sản phẩm truyền thống được sản xuất tại vùng biển giàu tài nguyên, sử dụng nguồn cá cơm tươi ngon kết hợp với muối tinh khiết. Áp dụng quy trình ủ chượp lâu năm theo phương pháp truyền thống, đồng thời kết hợp công nghệ kiểm soát chất lượng hiện đại, giúp giữ trọn hương vị nguyên bản, đảm bảo an toàn vệ sinh thực phẩm và đáp ứng tiêu chuẩn xuất khẩu. Đây là nỗ lực đưa giá trị ẩm thực Việt ra thị trường quốc tế.`,
+      },
+      {
+        title: 'Ứng dụng công nghệ trong đầu tư',
+        description:
+          'Phát triển nền tảng quản lý vốn và dự án thông minh, cho phép nhà đầu tư theo dõi tiến độ, báo cáo tài chính và hiệu quả dự án theo thời gian thực. Hệ thống ứng dụng phân tích dữ liệu lớn (Big Data) và trí tuệ nhân tạo (AI) để gợi ý chiến lược đầu tư, tăng tính minh bạch và tối ưu hóa lợi nhuận. Đồng thời, nền tảng tạo môi trường kết nối giữa nhà đầu tư và doanh nghiệp, thúc đẩy hệ sinh thái phát triển bền vững.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Cana_1.jpg',
+      alt: 'Nhà máy CANA',
+    }}
+  >
+    <Fragment slot="content">Dự án tiêu biểu</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Tầm nhìn',
+        description:
+          'Trở thành nền tảng kết nối đầu tư đáng tin cậy hàng đầu tại Việt Nam, nơi hội tụ các dự án chất lượng, minh bạch và tiềm năng. Chúng tôi hướng tới việc đưa sản phẩm, thương hiệu và ý tưởng Việt vươn ra thị trường quốc tế, khẳng định vị thế của trí tuệ và bản sắc Việt trên bản đồ kinh tế toàn cầu.',
+      },
+      {
+        title: 'Sứ mệnh',
+        description:
+          'Kết nối nguồn vốn, ý tưởng sáng tạo và con người tài năng để cùng kiến tạo một tương lai thịnh vượng và bền vững. Chúng tôi không chỉ mang đến cơ hội đầu tư sinh lợi, mà còn đồng hành với đối tác và cộng đồng trên hành trình hiện thực hóa ước mơ, góp phần nâng tầm giá trị kinh tế – xã hội của đất nước.',
+      },
+      {
+        title: 'Giá trị cốt lõi',
+        description:
+          '<strong>Minh bạch </strong>– Thông tin rõ ràng, đáng tin cậy.<br><strong>Sáng tạo </strong>– Đổi mới tư duy, ứng dụng công nghệ.<br><strong>Bền vững </strong>– Phát triển hài hòa kinh tế, xã hội, môi trường.<br><strong>Cộng đồng </strong>– Gắn kết, cùng nhau phát triển.</p>',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/TamNhin.jpg',
+      alt: 'Tầm nhìn và sứ mệnh',
+    }}
+  >
+    <Fragment slot="content">Tầm nhìn & Sứ mệnh</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Giới thiệu"
+    title="MÔ HÌNH HOẠT ĐỘNG"
+    subtitle="EXO Invest kết hợp giữa sản phẩm truyền thống, công nghệ hiện đại và cộng đồng gắn kết, tạo nên chuỗi giá trị bền vững từ sản xuất đến đầu tư."
+    items={[
+      {
+        title: 'Sản phẩm đầu tiên được chọn lựa & phát triển:',
+        description:
+          '- Khởi đầu bằng sản phẩm Nước mắm CANA – thương hiệu mang hương vị truyền thống, được sản xuất theo quy trình kiểm soát chất lượng hiện đại.<br>- Vừa bảo tồn giá trị văn hóa ẩm thực Việt, vừa mở rộng thị trường thông qua các kênh phân phối thông minh.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Phiếu Giao Hàng (PGH) – Quyền lợi kép',
+        description:
+          '- Giải pháp PGH giúp khách hàng vừa nhận sản phẩm, vừa sở hữu quyền lợi đầu tư.<br>- Mô hình “quyền lợi kép” tạo giá trị gia tăng: tiêu dùng có lợi – đầu tư sinh lời.<br>- Mọi giao dịch đều minh bạch và được quản lý qua nền tảng công nghệ.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Affiliate – Tiếp thị liên kết',
+        description:
+          '- Cộng đồng tham gia có thể trở thành đối tác phân phối thông qua chương trình Affiliate.<br>- Mỗi cá nhân hoặc doanh nghiệp đều có thể chia sẻ sản phẩm, nhận hoa hồng và xây dựng nguồn thu nhập thụ động.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Đào tạo tài chính 3 cấp độ',
+        description:
+          '- Chương trình đào tạo bài bản, chia thành 3 cấp độ:<br> + <strong>Cơ bản </strong>– Kiến thức tài chính nền tảng, quản lý chi tiêu.<br> + <strong>Nâng cao </strong>– Chiến lược đầu tư, quản trị rủi ro.<br> + <strong>Chuyên sâu </strong>– Xây dựng hệ thống kinh doanh và tối ưu lợi nhuận.<br>- Mục tiêu: Trang bị cho cộng đồng kỹ năng để tự chủ tài chính và phát triển lâu dài',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <!--<Steps
+    title="Quy trình mua hàng"
+    items={[
+      {
+        title: 'Bước 1: <span class="font-medium">Cài đặt ứng dụng mua hàng</span>',
+        description:
+          "1. Tải ứng dụng GlobeDr trên App Store (IOS) hoặc CH-Play (Android).<br>2. Đăng ký và KYC tài khoản GlobeDr",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Add content</span>',
+        description:
+          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        description:
+          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  /> -->
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Hệ sinh thái EXO"
+    subtitle="Hệ sinh thái toàn diện kết nối sản phẩm, dịch vụ, công nghệ và tài chính, tạo ra giá trị bền vững cho cộng đồng và nhà đầu tư."
+    tagline="Tổng quan"
+    items={[
+      {
+        title: 'EXO Wellnez',
+        description: "Nền tảng chăm sóc sức khỏe toàn diện, kết hợp y học hiện đại và liệu pháp tự nhiên. Cung cấp sản phẩm, dịch vụ và tư vấn cá nhân hóa giúp cộng đồng nâng cao sức khỏe, phòng ngừa bệnh tật.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'GlobeDr (EDMedical)',
+        description:
+          "Giải pháp y tế từ xa kết nối bệnh nhân với đội ngũ bác sĩ quốc tế. Ứng dụng công nghệ AI trong chẩn đoán, quản lý hồ sơ sức khỏe và hỗ trợ điều trị liên tục, mọi lúc, mọi nơi.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'EXO Tele-Wellness',
+        description:
+          'Mô hình chăm sóc sức khỏe từ xa kết hợp thiết bị đeo thông minh, theo dõi chỉ số cơ thể theo thời gian thực và gửi cảnh báo sớm. Hỗ trợ quản lý sức khỏe chủ động cho gia đình và cộng đồng.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'EXO Tech',
+        description:
+          "Trung tâm phát triển công nghệ của EXO, nghiên cứu và triển khai Blockchain, AI, Big Data vào quản lý đầu tư, sản xuất và thương mại. Là nền tảng kết nối toàn bộ các mảnh ghép hệ sinh thái.",
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'EXO Bank',
+        description:
+          'Ngân hàng số hỗ trợ giao dịch tài chính, lưu ký tài sản và quản lý vốn cho nhà đầu tư. Cung cấp giải pháp thanh toán, cho vay và tích hợp tiền điện tử – tiền pháp định.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'EXO Logistics',
+        description: 'Dịch vụ hậu cần thông minh, quản lý chuỗi cung ứng từ nhà sản xuất đến người tiêu dùng. Tích hợp theo dõi vận đơn, tối ưu chi phí và tốc độ giao hàng.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'CEX/DEX – DAOs',
+        description: 'Hệ thống sàn giao dịch tập trung (CEX) và phi tập trung (DEX) kết hợp mô hình quản trị cộng đồng (DAOs). Đảm bảo giao dịch minh bạch, an toàn và thúc đẩy sự tham gia của cộng đồng trong định hướng phát triển dự án.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'EXO Invest',
+        description:
+          'Nền tảng kết nối nhà đầu tư với các dự án tiềm năng, đảm bảo minh bạch thông tin, quản lý dòng vốn và tối ưu hóa lợi nhuận. Tích hợp hệ thống phân tích dữ liệu và công cụ đánh giá rủi ro, giúp quyết định đầu tư chính xác hơn.',
+        icon: 'flat-color-icons:business-contact',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Khám phá thêm nội dung trong Blog"
+    information={`Blog của EXO Invest chia sẻ kiến thức, kinh nghiệm và phân tích thị trường mới nhất.
+                  Mỗi bài viết sẽ giúp bạn nâng cao kỹ năng đầu tư và cập nhật xu hướng tài chính.
+                  Hãy khám phá để tích lũy thêm kiến thức và cơ hội đầu tư thông minh.
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Câu Hỏi Thường Gặp"
+    subtitle="Giải đáp các thắc mắc về mô hình hoạt động và hệ sinh thái EXO Invest"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '1. EXO Invest là gì?',
+        description:
+          "EXO Invest là một công ty tiên phong trong việc kết hợp thương mại điện tử, số hóa sản phẩm tiêu dùng thành tài sản đầu tư và đào tạo tài chính thực chiến. Mục tiêu của chúng tôi là xây dựng một cộng đồng đầu tư an toàn, bền vững và hiện đại.",
+      },
+      {
+        title: '2. Mô hình hoạt động của EXO Invest có gì đặc biệt?',
+        description:
+          'Chúng tôi số hóa các sản phẩm tiêu dùng thiết yếu (ví dụ: Nước mắm truyền thống CANA) thành "Phiếu Giao Hàng". Khi sở hữu phiếu này, khách hàng không chỉ nhận được sản phẩm chất lượng mà còn có cơ hội phát triển kinh doanh thông qua hệ thống tiếp thị liên kết (Affiliate) và chương trình đào tạo tài chính chuyên sâu.',
+      },
+      {
+        title: '3. "Số hóa sản phẩm tiêu dùng" nghĩa là gì?',
+        description:
+          "Điều này có nghĩa là chúng tôi biến các sản phẩm vật lý thành một loại tài sản số, giúp người tiêu dùng có thể đầu tư, sinh lời và nhân bản tài sản của mình một cách minh bạch và an toàn.",
+      },
+      {
+        title: "4. EXO Invest có các sản phẩm và dịch vụ nào?",
+        description:
+          "EXO Invest là trung tâm kết nối một hệ sinh thái toàn diện, bao gồm:<br>- EXO Wellnez: Nền tảng chăm sóc sức khỏe chủ động.<br>- GlobeDr (EDMedical): Giải pháp y tế từ xa.<br>- EXO Tele-Wellness: Dịch vụ chăm sóc sức khỏe tại nhà.<br>- EXO Tech: Đơn vị phát triển công nghệ và số hóa.<br>- EXO Bank: Dự án tài chính kỹ thuật số.<br>- EXO Logistics: Hệ thống giao nhận và quản lý kho thông minh.<br>- CEX/DEX – DAOs: Phát triển nền tảng giao dịch phi tập trung và tập trung.",
+      },
+      {
+        title: '5. Chương trình đào tạo tài chính của EXO Invest dành cho ai?',
+        description:
+          "Chương trình đào tạo của chúng tôi được thiết kế với 3 cấp độ, phù hợp cho mọi đối tượng từ người mới bắt đầu tìm hiểu về tài chính đến các nhà đầu tư chuyên sâu, nhằm giúp mọi người biến kiến thức thành một nghề thực thụ và làm chủ tài chính cá nhân.",
+      },
+      {
+        title: '6. Khách hàng có thể tìm thấy trụ sở chính của EXO Invest ở đâu?',
+        description:
+          'Bạn có thể tìm thấy trụ sở chính của chúng tôi tại địa chỉ: 196 đường III (Ba La Mã), Khu phố 43, phường Phước Long, KDC Khang Điền, TP. HCM.',
+      },
+    ]}
+  />
+
+
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Tham gia ngay',
+        href: 'https://zalo.me/g/cvjyuf753',
+        target: '_blank',
+        icon: 'tabler:world',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      EXO Invest&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Nước Nắm CANA</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Để biết thêm về gói sản phẩm và các chương trình kèm theo<br class="hidden md:inline" />Đừng ngần ngại tham gia cộng đồng Zalo để chúng tôi được hỗ trợ bạn :P
+    </Fragment>
+  </CallToAction>
+</Layout>
