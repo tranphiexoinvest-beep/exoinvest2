@@ -7,20 +7,10 @@ import { SITE } from 'astrowind:config';
 >
   🚀 {SITE?.name}
 </span> -->
-
 <div class="flex items-center">
   <!-- Logo light mode -->
-  <img 
-    src="/logo-light.png" 
-    alt={SITE?.name} 
-    class="h-8 w-auto mr-2 dark:hidden"
-  />
+  <img src="/logo-light.png" alt={SITE?.name} class="h-8 w-auto mr-2 dark:hidden" />
 
   <!-- Logo dark mode -->
-  <img 
-    src="/logo-dark.png" 
-    alt={SITE?.name} 
-    class="h-8 w-auto mr-2 hidden dark:block"
-  />
-
+  <img src="/logo-dark.png" alt={SITE?.name} class="h-8 w-auto mr-2 hidden dark:block" />
 </div>

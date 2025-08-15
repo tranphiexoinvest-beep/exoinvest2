@@ -6,8 +6,8 @@ import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import Button from '~/components/ui/Button.astro';
 
 import { getHomePermalink } from '~/utils/permalinks';
-import { trimSlash, getAsset } from '~/utils/permalinks';
-//import type { CallToAction } from '~/types';
+import { trimSlash } from '~/utils/permalinks'; //, getAsset
+import type { CallToAction } from '~/types';
 
 interface Link {
   text?: string;
@@ -40,7 +40,7 @@ const {
   isDark = false,
   isFullWidth = false,
   showToggleTheme = false,
-  showRssFeed = false,
+  //  showRssFeed = false,
   position = 'center',
 } = Astro.props;
 

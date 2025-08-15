@@ -114,7 +114,7 @@ export const headerData = {
       text: 'Widgets',
       href: '#',
     },*/
-    
+
     {
       text: 'Sản phẩm',
       href: getPermalink('/homes/SanPham'),
@@ -154,9 +154,7 @@ export const footerData = {
     },
     {
       title: 'Hỗ trợ',
-      links: [
-        { text: 'Hướng dẫn', href: '#' },
-      ],
+      links: [{ text: 'Hướng dẫn', href: '#' }],
     },
     {
       title: 'Kinh doanh',
@@ -175,8 +173,8 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Công Ty TNHH EXO Invest'},
-    { text: 'MST: 0318908107'},
+    { text: 'Công Ty TNHH EXO Invest' },
+    { text: 'MST: 0318908107' },
     //{ text: 'Terms', href: getPermalink('/terms') },
     //{ text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
