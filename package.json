@@ -22,7 +22,8 @@
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
