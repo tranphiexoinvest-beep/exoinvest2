@@ -1,24 +1,26 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Header from '~/components/widgets/Header.astro';
+//import Header from '~/components/widgets/Header.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import Content from '~/components/widgets/Content.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+//import Content from '~/components/widgets/Content.astro';
+//import Testimonials from '~/components/widgets/Testimonials.astro';
+//import FAQs from '~/components/widgets/FAQs.astro';
+//import Stats from '~/components/widgets/Stats.astro';
 
 import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 
+import { YouTube } from 'astro-embed';
+
 const appStoreImg = '~/assets/images/app-store.png';
-const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
+const appStoreDownloadLink = 'https://apps.apple.com/vn/app/globedr-b%C3%A1c-s%C4%A9-to%C3%A0n-c%E1%BA%A7u/id1146265764';
 
 const googlePlayImg = '~/assets/images/google-play.png';
-const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
+const googlePlayDownloadLink = 'https://play.google.com/store/apps/details?id=com.globedr.app&hl=vi&pli=1';
 
 const metadata = {
   title: 'Mobile App Homepage',
@@ -27,7 +29,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
-  <Fragment slot="header">
+  <!--<Fragment slot="header">
     <Header
       position="left"
       links={[
@@ -44,7 +46,7 @@ const metadata = {
       isSticky
       showToggleTheme
     />
-  </Fragment>
+  </Fragment>-->
 
   <!-- Hero2 Widget ******************* -->
 
@@ -56,16 +58,16 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white">AstroWind App</span>: <br /> professional websites <span
-        class="hidden xl:inline">made easy</span
-      >
+      Quy trình <span class="hidden sm:inline">đăng ký & </span>mua phiếu giao hàng<br>
+      <span class="text-accent dark:text-white">nước mắm CANA</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Unlock boundless creativity at your fingertips: your gateway to innovative design.
-      </span>
-      Download now and embark on a journey to elevate your projects like never before.
+        Thực hiện dễ dàng chỉ với vài bước qua ứng dụng Globedr và hệ thống EXO.
+        <span class="hidden sm:inline">
+        Nhận hợp đồng điện tử & thông tin tài khoản ngay sau khi thanh toán.
+      </span><br>
+      Tải ứng dụng mua hàng GlobeDr:
     </Fragment>
 
     <div slot="actions" class="flex max-w-sm gap-4">
@@ -77,36 +79,37 @@ const metadata = {
         <Image src={googlePlayImg} alt="Google Play Image" width={200} />
       </Button>
     </div>
+    <YouTube id="TtRtkTzHVBU" />
   </Hero2>
 
   <!-- Features3 Widget ************** -->
 
   <Features3
     id="features"
-    title="How to use our app?"
-    subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
+    title="Quy trình mua hàng"
+    subtitle="Hướng dẫn từng bước để đăng ký và mua phiếu giao hàng nước mắm CANA qua ứng dụng Globedr."
     tagline="Step-by-step guide"
     columns={2}
     items={[
       {
-        title: 'Download and install the app',
-        description: `Begin your journey by downloading our user-friendly app from your device's app store or our official website.`,
+        title: 'Bước 1: Cài đặt ứng dụng mua hàng',
+        description: `1. Tải ứng dụng GlobeDr trên App Store (IOS) hoặc CH-Play (Android).<br>2. Đăng ký và KYC tài khoản GlobeDr`,
         icon: 'tabler:square-number-1',
       },
       {
-        title: 'Sign up',
+        title: 'Bước 2: Mua hàng và thanh toán',
         description:
-          'Create your account by providing the necessary information, enabling you to access our full range of features.',
+          '1. Tiến hành mua hàng qua liên kết người giới thiệu.<br>2. Chuyển khoản thanh toán theo yêu cầu trên trang mua hàng',
         icon: 'tabler:square-number-2',
       },
       {
-        title: 'Browse templates',
-        description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
+        title: 'Bước 3: Kích hoạt tài khoản đối tác',
+        description: '1. Xác nhận kích hoạt tài khoản Affiliate qua email đã đăng ký.<br>2. Đăng nhập bằng số CCCD và mật khẩu được đính kèm trong mail.',
         icon: 'tabler:square-number-3',
       },
       {
-        title: 'Preview and select a template',
-        description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
+        title: 'Bước 4: (Tùy chọn) Tạo yêu cầu giao hàng',
+        description: `1. Đăng nhập vào trang quản lý tài khoản Affiliate và tạo yêu cầu giao hàng.<br>2. Nếu giữ phiếu giao hàng nước mắm CANA để đầu tư thì không cần tạo yêu cầu giao hàng.`,
         icon: 'tabler:square-number-4',
       },
     ]}
@@ -114,11 +117,11 @@ const metadata = {
       src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
       alt: 'Colorful Image',
     }}
-  />
+    />
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!--<Content
     isReversed
     items={[
       {
@@ -151,13 +154,13 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Cài đặt ứng dụng mua hàng</h3>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!--<Content
     isAfterContent
     items={[
       {
@@ -190,22 +193,22 @@ const metadata = {
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!--<Stats
     title="Statistics of our app"
     stats={[
       { amount: '20K', icon: 'tabler:download' },
       { amount: '18.5K', icon: 'tabler:users' },
       { amount: '4.7', icon: 'tabler:user-star' },
     ]}
-  />
+  /> -->
 
   <!-- Testimonials Widget *********** -->
 
-  <Testimonials
+  <!--<Testimonials
     title="What our users say?"
     testimonials={[
       {
@@ -243,11 +246,11 @@ const metadata = {
       href: 'https://github.com/onwidget/astrowind',
       icon: 'tabler:chevron-right',
     }}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
 
-  <FAQs
+  <!--<FAQs
     title="Still have some doubts?"
     items={[
       {
@@ -275,14 +278,14 @@ const metadata = {
           'While the app itself may be free to download, there may be costs associated with purchasing specific templates based on your preferences and project requirements.',
       },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
     id="download"
-    title="Download our app now!"
-    subtitle="Access a variety of stunning templates, simplify your creative process, and elevate your online presence."
+    title="Sẵn sàng đăng ký & nhận nước mắm CANA?"
+    subtitle="Tải ứng dụng Globedr, đăng ký ngay hôm nay để nhận ưu đãi và quyền lợi hấp dẫn từ hệ thống EXO."
   >
     <div slot="actions" class="flex max-w-sm gap-4">
       <Button variant="link" href={appStoreDownloadLink}>

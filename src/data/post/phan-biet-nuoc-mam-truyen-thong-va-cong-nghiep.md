@@ -1,43 +1,54 @@
 ---
-publishDate: 2023-07-15T00:00:00Z
-title: 'Mastering Landing Pages: Practical Guide for 2023'
-excerpt: Ever clicked on an ad and found yourself on a page that seemed to really want you to do something? Congratulations, you've landed on a Landing Page!
-image: https://images.unsplash.com/photo-1561069934-eee225952461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+publishDate: 2025-08-19T16:06:22Z
+author: Quỳnh Trân
+title: 'Cách phân biệt nước mắm truyền thống và nước mắm công nghiệp'
+excerpt: Hợp khẩu vị, giá thành rẻ, bảo quản lâu là những bề nổi thu hút nhiều người ưa chuộng nước mắm công nghiệp.
+image: "~/assets/images/blogs/bl3.jpg"
+category: Nước mắm CANA
 tags:
-  - landing-pages
-  - front-end
-  - resources
+  - congdongyeubep
+  - nghienmauan
 metadata:
-  canonical: https://astrowind.vercel.app/landing
+  canonical: https://exoinvest.com.vn/phan-biet-nuoc-mam-truyen-thong-va-cong-nghiep
 ---
 
-In the vast digital landscape, standing out is more than a desire—it's a necessity. Enter the world of Landing Pages, the unsung heroes of digital marketing. With the power of the AstroWind template, developed using Astro and Tailwind CSS, crafting these pages becomes even more intuitive. Let's dive deep into understanding, creating, and optimizing them.
+Tuy nhiên với dây chuyền sản xuất có nhiều loại hóa chất tăng vị ngon, mùi hương là một mối họa tiềm ẩn lâu dài ít ai biết. Sau đây là cách phân biệt nước mắm truyền thống và nước mắm công nghiệp:
 
-## Landing Pages Unveiled
+### ✨Dựa vào thành phần
 
-A **Landing Page** is a standalone web page, distinct from your main website. Crafted with a singular objective: to convert visitors into actionable leads or sales. It's where a visitor "lands" post-clicking on a marketing link or ad.
+- Nước mắm truyền thống: Nguyên liệu chủ yếu cá và muối với tỉ lệ 3 cá 1 muối hoặc 10 cá 4 muối.
+- Nước mắm công nghiệp: Có khoảng 20 thành phần khác nhau
 
-Imagine clicking on an ad for a limited-time discount on a popular shoe brand. This action guides you to a page that showcases the discounted shoes, featuring a clear "Buy Now" button. That's a Landing Page in action, focusing your attention solely on the offer.
+### ✨Dựa vào độ đạm
 
-## The Power of Precision
+Theo nghiên cứu của các chuyên gia Việt Nam đã phân chia theo độ đạm của nước mắm chính gốc gồm có 4 loại như sau:
 
-Unlike a homepage brimming with diverse content, a Landing Page is laser-focused. It eliminates potential distractions like excessive navigation, ensuring the visitor's attention remains undivided. The result? Higher conversion rates and a more streamlined user experience.
+<!--![Target](https://images.unsplash.com/photo-1596008194705-2091cd6764d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1639&q=80)-->
 
-![Target](https://images.unsplash.com/photo-1596008194705-2091cd6764d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1639&q=80)
+- Nước mắm loại đặc biệt: độ đạm > 30 độ
+- Nước mắm loại thượng hạng: độ đạm > 25 độ
+- Nước mắm loại hạng 1: độ đạm > 15 độ
+- Nước mắm loại hạng 2: độ đạm > 10 độ
 
-Think of a Landing Page as a digital salesperson. Just as a salesperson would pitch a product without distractions, a Landing Page promotes an offer without unnecessary links or information. It's like walking into a store with a single product on display, making your choice straightforward.
+Nước mắm truyền thống: làm từ cá và muối biển, giàu dinh dưỡng, có độ đạm cao dao động từ 25-40 độ
 
-## Why Landing Pages Matter
+Nước mắm công nghiệp: được tạo thành từ sự pha loãng nước mắm truyền thống, sau đó trộn thêm hơn chục chất điều vị, tạo màu, chất bảo quản, chất điều chỉnh độ chua, tạo sánh...có những loại chỉ được gọi là nước chấm vì độ đạm thậm chí còn < 10 độ
 
-In today's digital rush, hoping customers stumble upon you is a strategy of the past. Landing Pages are the future. They:
+### ✨Dựa vào màu sắc
 
-- **Guide Traffic**: Directing visitors seamlessly through the sales funnel.
-- **Boost ROI**: Maximizing returns on marketing investments.
-- **Personalize User Experience**: Tailoring content to specific audience segments.
+Nước mắm truyền thống: Có màu vàng ươm nếu đã mở nắp và tiếp xúc với không khí vài tiếng sẽ chuyển sang màu sẫm hơn do trong quá trình chế biến không sử dụng chất phụ gia
 
-For instance, if you're launching a new fitness app. A well-crafted Landing Page can target individuals interested in health and wellness, offering them a free trial. This targeted approach ensures that those genuinely interested in fitness are the ones you're engaging with.
+Nước mắm công nghiệp: có màu sắc đẹp mắt, và để ngoài không khí bên ngoài vẫn không thay đổi màu sắc do có sử dụng chất tạo màu và chất phụ gia.
 
-## Crafting the Perfect Landing Page
+### ✨Dựa vào hương vị
+
+Nước mắm truyền thống: Vị mặn, gắt nhưng ăn thấy có vị ngọt của đạm thật ở đầu lưỡi. Hương vị thơm nồng, có màu trong veo, hơi đậm.
+
+Nước mắm công nghiệp: Vị ngọt dịu, dễ ăn, màu sắc trong, hơi nhạt.
+
+**👉Và cách dễ phân biệt nhất là về giá thành, nước mắm truyền thống có giá cao hơn từ 60.000đ đến 80.000/chai. Có loại cao cấp trên 100.000đ so với nước mắm công nghiệp.**
+
+<!--## Crafting the Perfect Landing Page
 
 Every element of your Landing Page should resonate with its core objective. Here's what a high-converting Landing Page entails:
 
@@ -149,4 +160,4 @@ This approach ensures that you observe the best practices in action. Also, it en
 
 In the digital marketing symphony, Landing Pages become the crescendo. They capture attention, evoke action, and drive results. As we move forward, an essential task is to optimize, maintain relevance, and create high-converting Landing Pages. These factors collectively hold the key to achieving digital success.
 
-Imagine a world where every online interaction gets personalized and directed. This showcases the potential of Landing Pages. For startups seeking traction or established brands introducing new products, Landing Pages can serve as the catalyst. They possess the power to spur digital growth and boost engagement.
+Imagine a world where every online interaction gets personalized and directed. This showcases the potential of Landing Pages. For startups seeking traction or established brands introducing new products, Landing Pages can serve as the catalyst. They possess the power to spur digital growth and boost engagement.-->

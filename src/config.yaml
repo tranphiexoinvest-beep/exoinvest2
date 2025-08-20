@@ -11,7 +11,7 @@ metadata:
   title:
     default: EXO Invest
     template: '%s — EXO Invest'
-  description: "\U0001F680 EXO Invest - Nền tảng kết nối đầu tư uy tín, mang sản phẩm và dự án Việt vươn ra thế giới. Cung cấp giải pháp đầu tư thông minh, minh bạch và bền vững."
+  description: "EXO Invest - Nền tảng kết nối đầu tư uy tín, mang sản phẩm và dự án Việt vươn ra thế giới. Cung cấp giải pháp đầu tư thông minh, minh bạch và bền vững."
   robots:
     index: true
     follow: true

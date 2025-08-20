@@ -1,8 +1,8 @@
-import { getPermalink } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    /*{, getBlogPermalink, getAsset
+    /*{, getAsset
       text: 'Homes',
       links: [
         {
@@ -88,13 +88,10 @@ export const headerData = {
     {
       text: 'Blog',
       links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
+        
         {
           text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          href: getPermalink('gioi-thieu-nuoc-mam-truyen-thong-cana', 'post'),
         },
         {
           text: 'Article (with MDX)',
@@ -108,6 +105,14 @@ export const headerData = {
           text: 'Tag Page',
           href: getPermalink('astro', 'tag'),
         },
+        {
+          text: 'Mô Hình Hoạt Động',
+          href: getPermalink('gioi-thieu-nuoc-mam-truyen-thong-cana', 'post'),
+        },
+        {
+          text: 'Hệ Sinh Thái',
+          href: getPermalink('gioi-thieu-nuoc-mam-truyen-thong-cana', 'post'),
+        },
       ],
     },
     {
@@ -120,20 +125,16 @@ export const headerData = {
       href: getPermalink('/homes/SanPham'),
     },
     {
-      text: 'Giá Trị CỐt Lõi',
-      href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+      text: 'Mua hàng',
+      href: getPermalink('/homes/muahang'),
     },
+    /*{
+      text: 'Startup',
+      href: getPermalink('/homes/startup'),
+    },*/
     {
-      text: 'Mô Hình Hoạt Động',
-      href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-    },
-    {
-      text: 'Hệ Sinh Thái',
-      href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-    },
-    {
-      text: 'Liên Hệ',
-      href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+      text: 'Blog EXO',
+      href: getBlogPermalink(),
     },
   ],
   /*actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],*/
@@ -148,7 +149,7 @@ export const footerData = {
         { text: 'Trang chủ', href: '#' },
         { text: 'Về chúng tôi', href: '#' },
         { text: 'Dự án', href: '#' },
-        { text: 'Tin tức & Blog', href: '#' },
+        { text: 'Tin tức & Blog', href: getBlogPermalink() },
         { text: 'Liên hệ', href: '#' },
       ],
     },

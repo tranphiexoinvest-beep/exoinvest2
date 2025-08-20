@@ -28,10 +28,13 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Tìm hiểu ngay',
-        href: 'https://exoinvest.vn',
+        href: '#gioi-thieu', // dẫn đến section có id là gioi-thieu trong trang
+        //target: '_blank', // buộc mở tab mới khi nhấn nút
+      },
+      { 
+        text: 'Gia nhập cộng đồng', href: 'https://zalo.me/g/cvjyuf753',
         target: '_blank',
       },
-      { text: 'Gia nhập cộng đồng', href: 'https://zalo.me/g/cvjyuf753' },
     ]}
     image={{
       light: imgLight,
@@ -66,13 +69,14 @@ const metadata = {
       { title: 'Năm kinh nghiệm', amount: '5+' },
       { title: 'Thành viên cộng đồng', amount: '10,000+' },
       { title: 'Đối tác chiến lược', amount: '50+' },
-      { title: 'Mảnh ghép hệ sinh thái', amount: '7' },
+      { title: 'Mảnh ghép hệ sinh thái', amount: '8' },
     ]}
   />
 
   <!-- Content Widget **************** -->
 
   <Content
+    id="gioi-thieu"
     isReversed
     tagline="Giới thiệu"
     title="Về Chúng Tôi"
@@ -103,7 +107,7 @@ const metadata = {
       alt: 'Hình Công Ty EXO',
     }}
   >
-    <Fragment slot="content">Chúng tôi là ai?</Fragment>
+    <Fragment slot="content"><h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Chúng tôi là ai?</h3></Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -130,7 +134,7 @@ const metadata = {
       alt: 'Nhà máy CANA',
     }}
   >
-    <Fragment slot="content">Dự án tiêu biểu</Fragment>
+    <Fragment slot="content"><h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Dự án tiêu biểu</h3></Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -164,7 +168,7 @@ const metadata = {
       alt: 'Tầm nhìn và sứ mệnh',
     }}
   >
-    <Fragment slot="content">Tầm nhìn & Sứ mệnh</Fragment>
+    <Fragment slot="content"><h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Tầm nhìn & Sứ mệnh</h3></Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
