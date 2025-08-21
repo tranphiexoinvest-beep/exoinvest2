@@ -1,0 +1,79 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Liên hệ',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Liên hệ" title="Kết nối cùng chúng tôi" />
+
+  <ContactUs
+    id="form"
+    title="Gửi tin nhắn cho chúng tôi ngay hôm nay!"
+    subtitle="Quý khách có thể tham khảo mục Câu hỏi thường gặp (FAQ) để nhanh chóng tìm thấy giải pháp phù hợp. Nếu vẫn chưa có câu trả lời như mong muốn, đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng đồng hành và giải đáp kịp thời."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Họ và Tên',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Nội dung tin nhắn',
+    }}
+    disclaimer={{
+      label:
+        'Bằng việc gửi biểu mẫu này, Quý khách đồng ý để chúng tôi thu thập và xử lý thông tin cá nhân nhằm mục đích hỗ trợ.',
+    }}
+    description="Đội ngũ hỗ trợ của chúng tôi thường phản hồi trong vòng 24 giờ làm việc."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Chúng tôi luôn đồng hành cùng Quý khách"
+    items={[
+      {
+        title: 'Tư vấn & Hỗ trợ',
+        description: `Giải đáp thắc mắc, hướng dẫn sử dụng nền tảng và hỗ trợ trong quá trình đầu tư.`,
+      },
+      {
+        title: 'Thông tin sản phẩm',
+        description:
+          'Cung cấp chi tiết về các gói đầu tư, quyền lợi và cơ hội tham gia hệ sinh thái EXO Invest.',
+      },
+      {
+        title: 'Hỗ trợ kỹ thuật',
+        description:
+          'Đồng hành xử lý các vấn đề liên quan đến đăng ký, đăng nhập, giao dịch hoặc thao tác trên hệ thống.',
+      },
+      {
+        title: 'Điện thoại',
+        description: '+84 931 437 682',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'info@exoinvest.vn',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Văn phòng',
+        description: 'Số 196 đường III (KDC Khang Điền), KP. 43, Phường Phước Long, TP. Hồ Chí Minh',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

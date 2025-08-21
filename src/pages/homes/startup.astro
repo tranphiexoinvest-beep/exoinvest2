@@ -11,7 +11,10 @@ import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
-import { YouTube } from 'astro-embed';
+//import { YouTube } from 'astro-embed';
+//import { YouTube } from '@astro-community/astro-embed-youtube';
+
+import VideoSection from "~/components/widgets/VideoSection.astro";
 
 const metadata = {
   title: 'Startup Landing Page',
@@ -45,16 +48,43 @@ const metadata = {
       startup's digital footprint, fostering credibility, and expanding your reach.
     </Fragment>
 
-    <Fragment slot="image">
-      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
+    <!--<Fragment slot="image">
+      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" params="rel=0"  />
       <style is:inline>
         lite-youtube {
           margin: 0 auto;
           max-width: 100%;
         }
       </style>
-    </Fragment>
+    </Fragment> -->
+   
   </Hero>
+  <VideoSection
+    id="intro-video"
+    title="Khám phá AstroWind"
+    subtitle="Thiết kế hiện đại, dễ tùy biến"
+    tagline="Giải pháp Website"
+    description="AstroWind giúp bạn tạo website nhanh, đẹp, tối ưu SEO và triển khai dễ dàng trên GitHub Pages, Vercel hoặc Netlify."
+    videoId="gxBkghlglTg"
+    ctaText="Khám phá ngay"
+    ctaLink="https://github.com/onwidget/astrowind"
+    isDark={false}
+    reverse={false}
+    
+  />
+
+  <VideoSection
+    id="intro-video"
+    title="Khám phá AstroWind"
+    subtitle="Thiết kế hiện đại, dễ tùy biến"
+    tagline="Giải pháp Website"
+    description="AstroWind giúp bạn tạo website nhanh, đẹp, tối ưu SEO và triển khai dễ dàng trên GitHub Pages, Vercel hoặc Netlify."
+    videoId="gxBkghlglTg"
+    ctaText="Khám phá ngay"
+    ctaLink="https://github.com/onwidget/astrowind"
+    isDark={false}
+    reverse={true}
+  />
 
   <!-- Features2 Widget ************** -->
 

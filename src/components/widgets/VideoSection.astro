@@ -1,0 +1,84 @@
+---
+import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
+import Headline from "~/components/ui/Headline.astro";
+import Button from "~/components/ui/Button.astro";
+import YouTube from "~/components/widgets/YouTube.astro";
+
+interface Props {
+  id?: string;
+  isDark?: boolean;
+  bg?: string;
+  title: string;
+  subtitle?: string;
+  tagline?: string;
+  description?: string;
+  videoId: string;
+  ctaText?: string;
+  ctaLink?: string;
+  reverse?: boolean;
+}
+
+const {
+  id,
+  isDark = false,
+  bg = await Astro.slots.render('bg'),
+  title,
+  subtitle = "",
+  tagline = "",
+  description = "",
+  videoId,
+  ctaText,
+  ctaLink = "#",
+  reverse = false,
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} bg={bg} containerClass="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+    {reverse ? (
+      <>
+        <!-- Video trước -->
+        <div class="flex justify-center md:justify-start order-1 md:order-1">
+          <div class="w-full max-w-xl rounded-2xl overflow-hidden shadow-lg">
+            <YouTube videoId={videoId} title={title} params="rel=0" />
+          </div>
+        </div>
+
+        <!-- Text sau -->
+        <div class="space-y-6 order-2 md:order-2">
+          <Headline title={title} subtitle={subtitle} tagline={tagline} />
+          {description && (
+            <p set:html={description}></p>
+          )}
+          {ctaText && (
+            <div class="mt-6 flex gap-4">
+              <Button variant="primary" text={ctaText} href={ctaLink} />
+            </div>
+          )}
+        </div>
+      </>
+    ) : (
+      <>
+        <!-- Text trước -->
+        <div class="space-y-6 order-2 md:order-1">
+          <Headline title={title} subtitle={subtitle} tagline={tagline} />
+          {description && (
+            <p set:html={description}></p>
+          )}
+          {ctaText && (
+            <div class="mt-6 flex gap-4">
+              <Button variant="primary" text={ctaText} href={ctaLink} />
+            </div>
+          )}
+        </div>
+
+        <!-- Video sau -->
+        <div class="flex justify-center md:justify-end order-1 md:order-2">
+          <div class="w-full max-w-xl rounded-2xl overflow-hidden shadow-lg">
+            <YouTube videoId={videoId} title={title} params="rel=0" />
+          </div>
+        </div>
+      </>
+    )}
+  </div>
+</WidgetWrapper>

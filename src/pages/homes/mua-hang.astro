@@ -14,7 +14,8 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 
-import { YouTube } from 'astro-embed';
+//import { YouTube } from 'astro-embed';
+import VideoSection from "~/components/widgets/VideoSection.astro";
 
 const appStoreImg = '~/assets/images/app-store.png';
 const appStoreDownloadLink = 'https://apps.apple.com/vn/app/globedr-b%C3%A1c-s%C4%A9-to%C3%A0n-c%E1%BA%A7u/id1146265764';
@@ -23,7 +24,7 @@ const googlePlayImg = '~/assets/images/google-play.png';
 const googlePlayDownloadLink = 'https://play.google.com/store/apps/details?id=com.globedr.app&hl=vi&pli=1';
 
 const metadata = {
-  title: 'Mobile App Homepage',
+  title: 'Mua nước mắm CANA',
 };
 ---
 
@@ -51,6 +52,7 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
+    id="mobile-app"
     tagline="Mobile App Web Demo"
     image={{
       src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
@@ -79,7 +81,6 @@ const metadata = {
         <Image src={googlePlayImg} alt="Google Play Image" width={200} />
       </Button>
     </div>
-    <YouTube id="TtRtkTzHVBU" />
   </Hero2>
 
   <!-- Features3 Widget ************** -->
@@ -118,6 +119,34 @@ const metadata = {
       alt: 'Colorful Image',
     }}
     />
+
+  <!-- Video Widget **************** ctaText="Khám phá ngay"
+    ctaLink="https://github.com/onwidget/astrowind"-->
+
+  <VideoSection
+    id="download-app-video"
+    title="Tải ứng dụng Mua Hàng"
+    subtitle="Hướng dẫn tải app GlobeDr và đăng ký tài khoản"
+    tagline="Hướng dẫn"
+    description=" - Tìm kiếm và tải ứng dụng GlobeDr trên App Store (IOS) hoặc CH-Play (Android) hoặc tải trực tiếp từ tùy chọn phía trên.<br> - Đăng ký tài khoản bằng số điện thoại đã xác thực cấp 2 hoặc email chính chủ.<br><br>Xem hướng dẫn chi tiết tại video."
+    videoId="gbMMg6Mj7o0"
+    ctaText="Tải app mua hàng"
+    ctaLink="#mobile-app"
+    isDark={false}
+    reverse={false}
+    
+  />
+
+  <VideoSection
+    id="kyc-video"
+    title="Xác thực tài khoản GlobeDr (KYC)"
+    subtitle="Hướng dẫn xác thực tài khoản"
+    tagline="Hướng dẫn"
+    description=" - Cần chuẩn bị CCCD có găn chíp và điện thoại hỗ trợ NFC để tiến hành xác thực tài khoản.<br> - Mở ứng dụng GlobeDr - chọn xác thực tài khoẳn - quét CCCD bằng NFC trên điện thoại - Quét khuôn mặt để xác thực chính chủ.<br><br>Xem hướng dẫn chi tiết tại video."
+    videoId="XZY_ClMr_g8"
+    isDark={false}
+    reverse={true}
+  />
 
   <!-- Content Widget **************** -->
 

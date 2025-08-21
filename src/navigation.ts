@@ -42,10 +42,7 @@ export const headerData = {
           text: 'About us',
           href: getPermalink('/about'),
         },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
+        
         {
           text: 'Terms',
           href: getPermalink('/terms'),
@@ -122,11 +119,11 @@ export const headerData = {
 
     {
       text: 'Sản phẩm',
-      href: getPermalink('/homes/SanPham'),
+      href: getPermalink('/homes/san-pham'),
     },
     {
       text: 'Mua hàng',
-      href: getPermalink('/homes/muahang'),
+      href: getPermalink('/homes/mua-hang'),
     },
     /*{
       text: 'Startup',
@@ -135,6 +132,10 @@ export const headerData = {
     {
       text: 'Blog EXO',
       href: getBlogPermalink(),
+    },
+    {
+      text: 'Liên hệ',
+      href: getPermalink('/lien-he'),
     },
   ],
   /*actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],*/
@@ -146,21 +147,21 @@ export const footerData = {
     {
       title: 'Liên kết nhanh',
       links: [
-        { text: 'Trang chủ', href: '#' },
-        { text: 'Về chúng tôi', href: '#' },
-        { text: 'Dự án', href: '#' },
+        { text: 'Trang chủ', href: getPermalink() },
+        //{ text: 'Về chúng tôi', href: '#' },
+        { text: 'Dự án', href: getPermalink('/homes/san-pham') },
         { text: 'Tin tức & Blog', href: getBlogPermalink() },
-        { text: 'Liên hệ', href: '#' },
+        { text: 'Liên hệ', href: getPermalink('/lien-he') },
       ],
     },
     {
       title: 'Hỗ trợ',
-      links: [{ text: 'Hướng dẫn', href: '#' }],
+      links: [{ text: 'Hướng dẫn', href: getPermalink('/homes/mua-hang') }],
     },
     {
       title: 'Kinh doanh',
       links: [
-        { text: 'Zalo', href: 'https://zalo.me/g/cvjyuf753' },
+        { text: 'Nhóm Zalo', href: 'https://zalo.me/g/cvjyuf753' },
         { text: '+84.931.437.682', href: 'tell:+84931437682' },
       ],
     },
@@ -175,16 +176,16 @@ export const footerData = {
   ],
   secondaryLinks: [
     { text: 'Công Ty TNHH EXO Invest' },
-    { text: 'MST: 0318908107' },
+    { text: 'MST: 0318908107', href:"https://masothue.com/0318908107-cong-ty-tnhh-exo-invest"},
     //{ text: 'Terms', href: getPermalink('/terms') },
     //{ text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
+    { ariaLabel: 'Tik Tok', icon: 'tabler:brand-tiktok', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    /*{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },*/
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
+    /*{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },*/
   ],
   footNote: `
     © 2025 <a class="text-blue-600 underline dark:text-muted" href="#"> EXO Invest </a> · Đầu tư minh bạch, phát triển bền vững.

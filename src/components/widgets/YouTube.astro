@@ -1,0 +1,49 @@
+---
+interface Props {
+  videoId: string;
+  title?: string;
+  autoplay?: boolean;
+  params?: string;
+}
+
+const { videoId, title = "YouTube video", autoplay = false, params = "" } = Astro.props;
+
+// Build URL cho iframe
+let src = `https://www.youtube.com/embed/${videoId}`;
+if (autoplay) src += "?autoplay=1";
+if (params) src += (autoplay ? "&" : "?") + params;
+---
+
+<div class="youtube-wrapper">
+  <iframe
+    src={src}
+    title={title}
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<style>
+.youtube-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
