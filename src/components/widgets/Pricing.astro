@@ -10,6 +10,7 @@ const {
   subtitle = '',
   tagline = '',
   prices = [],
+  sectionCallToAction,
 
   id,
   isDark = false,
@@ -80,4 +81,15 @@ const {
       }
     </div>
   </div>
+  <!-- Nút button chung của toàn section -->
+  {sectionCallToAction && (
+    <div class="mt-10 flex justify-center">
+      {typeof sectionCallToAction === 'string' ? (
+        <Fragment set:html={sectionCallToAction} />
+      ) : (
+        sectionCallToAction &&
+        sectionCallToAction.href && <Button variant="primary" {...sectionCallToAction} />
+      )}
+    </div>
+  )}
 </WidgetWrapper>

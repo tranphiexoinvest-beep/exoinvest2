@@ -151,6 +151,7 @@ export interface Price {
   callToAction?: CallToAction;
   hasRibbon?: boolean;
   ribbonTitle?: string;
+  
 }
 
 export interface Testimonial {
@@ -229,6 +230,7 @@ export interface Stats extends Omit<Headline, 'classes'>, Widget {
 
 export interface Pricing extends Omit<Headline, 'classes'>, Widget {
   prices?: Array<Price>;
+  sectionCallToAction?: string | { text: string; href: string };
 }
 
 export interface Testimonials extends Omit<Headline, 'classes'>, Widget {

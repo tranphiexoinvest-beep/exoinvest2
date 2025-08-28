@@ -13,6 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import imgLight from '~/assets/images/HeSinhThaiEXO_light.png';
 import imgDark from '~/assets/images/HeSinhThaiEXO_dark.png';
+import Roadmap from "~/components/Roadmap.astro";
 
 const metadata = {
   title: 'EXO Invest — Số hóa sản phẩm nông nghiệp việt',
@@ -43,14 +44,14 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Kiến tạo hệ sinh thái <br />
-      <span class="text-accent dark:text-white">Số hóa - Sức khỏe - Tài chính</span>
+      Kiến tạo hệ sinh thái số hóa<span class="hidden sm:inline"><br /></span>
+      <span class="text-accent dark:text-white">Sức khỏe - Tài chính</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">EXO Invest</span> tiên phong kết hợp thương mại điện tử, số hóa sản phẩm tiêu dùng và
-        đào tạo tài chính thực chiến, hướng đến cộng đồng đầu tư an toàn – bền vững – hiện đại.</span
+        <span class="font-semibold">EXO Invest</span> tiên phong kết hợp thương mại điện tử, số hóa sản phẩm nông nghiệp và
+        đào tạo nghề tài chính, hướng đến đầu tư an toàn – bền vững,<br> xây dựng cộng đồng thịnh vượng.</span
       ><br />
       <!--<span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
@@ -69,7 +70,7 @@ const metadata = {
       { title: 'Năm kinh nghiệm', amount: '5+' },
       { title: 'Thành viên cộng đồng', amount: '10,000+' },
       { title: 'Đối tác chiến lược', amount: '50+' },
-      { title: 'Mảnh ghép hệ sinh thái', amount: '8' },
+      { title: 'Mảnh ghép hệ sinh thái', amount: '8+' },
     ]}
   />
 
@@ -150,7 +151,7 @@ const metadata = {
       {
         title: 'Tầm nhìn',
         description:
-          'Trở thành nền tảng kết nối đầu tư đáng tin cậy hàng đầu tại Việt Nam, nơi hội tụ các dự án chất lượng, minh bạch và tiềm năng. Chúng tôi hướng tới việc đưa sản phẩm, thương hiệu và ý tưởng Việt vươn ra thị trường quốc tế, khẳng định vị thế của trí tuệ và bản sắc Việt trên bản đồ kinh tế toàn cầu.',
+          'Trở thành nền tảng kết nối đầu tư đáng tin cậy, nơi hội tụ các dự án chất lượng, minh bạch và tiềm năng. Chúng tôi hướng tới việc đưa sản phẩm, thương hiệu và ý tưởng Việt vươn ra thị trường quốc tế, khẳng định vị thế của trí tuệ và bản sắc Việt trên bản đồ kinh tế toàn cầu.',
       },
       {
         title: 'Sứ mệnh',
@@ -160,7 +161,7 @@ const metadata = {
       {
         title: 'Giá trị cốt lõi',
         description:
-          '<strong>Minh bạch </strong>– Thông tin rõ ràng, đáng tin cậy.<br><strong>Sáng tạo </strong>– Đổi mới tư duy, ứng dụng công nghệ.<br><strong>Bền vững </strong>– Phát triển hài hòa kinh tế, xã hội, môi trường.<br><strong>Cộng đồng </strong>– Gắn kết, cùng nhau phát triển.</p>',
+          '<strong>Minh bạch </strong>– Thông tin rõ ràng, đáng tin cậy.<br><strong>Sáng tạo </strong>– Đổi mới tư duy, ứng dụng công nghệ.<br><strong>Bền vững </strong>– Phát triển hài hòa kinh tế, xã hội, môi trường.<br><strong>Thịnh vượng </strong>– Gắn kết cộng đồng, cùng nhau phát triển.</p>',
       },
     ]}
     image={{
@@ -184,7 +185,7 @@ const metadata = {
     subtitle="EXO Invest kết hợp giữa sản phẩm truyền thống, công nghệ hiện đại và cộng đồng gắn kết, tạo nên chuỗi giá trị bền vững từ sản xuất đến đầu tư."
     items={[
       {
-        title: 'Sản phẩm đầu tiên được chọn lựa & phát triển:',
+        title: 'Sản phẩm đầu tiên được chọn lựa & phát triển',
         description:
           '- Khởi đầu bằng sản phẩm Nước mắm CANA – thương hiệu mang hương vị truyền thống, được sản xuất theo quy trình kiểm soát chất lượng hiện đại.<br>- Vừa bảo tồn giá trị văn hóa ẩm thực Việt, vừa mở rộng thị trường thông qua các kênh phân phối thông minh.',
         icon: 'tabler:brand-tailwind',
@@ -202,9 +203,9 @@ const metadata = {
         icon: 'tabler:list-check',
       },
       {
-        title: 'Đào tạo tài chính 3 cấp độ',
+        title: 'Đào tạo nghề tài chính nhiều cấp độ',
         description:
-          '- Chương trình đào tạo bài bản, chia thành 3 cấp độ:<br> + <strong>Cơ bản </strong>– Kiến thức tài chính nền tảng, quản lý chi tiêu.<br> + <strong>Nâng cao </strong>– Chiến lược đầu tư, quản trị rủi ro.<br> + <strong>Chuyên sâu </strong>– Xây dựng hệ thống kinh doanh và tối ưu lợi nhuận.<br>- Mục tiêu: Trang bị cho cộng đồng kỹ năng để tự chủ tài chính và phát triển lâu dài',
+          '- Chương trình đào tạo bài bản, chuyên nghiệp nhiều cấp độ:<br> + <strong>Cơ bản </strong>– Tư duy nghề, kiến thức tài chính nền tảng.<br> + <strong>Nâng cao </strong>– Chiến lược đầu tư, quản trị rủi ro.<br> + <strong>Chuyên sâu </strong>– Xây dựng hệ thống kinh doanh đa thu nhập và tối ưu lợi nhuận.<br>- Mục tiêu: Trang bị cho cộng đồng kỹ năng để tự chủ hành vi tài chính và phát triển lâu dài',
         icon: 'tabler:rocket',
       },
     ]}
@@ -252,25 +253,25 @@ const metadata = {
     tagline="Tổng quan"
     items={[
       {
-        title: 'EXO Wellnez',
+        title: 'EXO Wellness',
         description:
           'Nền tảng chăm sóc sức khỏe toàn diện, kết hợp y học hiện đại và liệu pháp tự nhiên. Cung cấp sản phẩm, dịch vụ và tư vấn cá nhân hóa giúp cộng đồng nâng cao sức khỏe, phòng ngừa bệnh tật.',
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'GlobeDr (EDMedical)',
+        title: 'EXO - IFCS',
         description:
-          'Giải pháp y tế từ xa kết nối bệnh nhân với đội ngũ bác sĩ quốc tế. Ứng dụng công nghệ AI trong chẩn đoán, quản lý hồ sơ sức khỏe và hỗ trợ điều trị liên tục, mọi lúc, mọi nơi.',
+          'IFCS là một cộng đồng đào tạo và hỗ trợ phát triển tư duy tài chính, đầu tư và giao dịch trên thị trường tài chính quốc tế, với hàng nghìn học viên đã tham gia.',
         icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'EXO Tele-Wellness',
+        title: 'EXO Mobi-Wellness',
         description:
           'Mô hình chăm sóc sức khỏe từ xa kết hợp thiết bị đeo thông minh, theo dõi chỉ số cơ thể theo thời gian thực và gửi cảnh báo sớm. Hỗ trợ quản lý sức khỏe chủ động cho gia đình và cộng đồng.',
         icon: 'flat-color-icons:approval',
       },
       {
-        title: 'EXO Tech',
+        title: 'EXO Techno',
         description:
           'Trung tâm phát triển công nghệ của EXO, nghiên cứu và triển khai Blockchain, AI, Big Data vào quản lý đầu tư, sản xuất và thương mại. Là nền tảng kết nối toàn bộ các mảnh ghép hệ sinh thái.',
         icon: 'flat-color-icons:advertising',
@@ -305,6 +306,38 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
+
+<!-- Timeline dự án   bg="bg-gray-50 dark:bg-slate-950" tagline="Cùng nhau xây dựng hệ sinh thái bền vững"
+  -->
+<Roadmap
+    id="roadmap"
+    title="Lộ Trình Phát Triển"
+    subtitle="Những cột mốc quan trọng trong hành trình"
+    
+    isDark={false}
+    steps={[
+      { 
+        year: "2025", 
+        title: "Phát Hành Phiếu Giao Hàng (PGH)", 
+        desc: "Ra mắt PGH với sản phẩm đầu tiên là Nước mắm CANA, đồng thời tiến hành thủ tục xin giấy phép cho giai đoạn tiếp theo." 
+      },
+      { 
+        year: "2026", 
+        title: "Chuyển đổi khai thác NFT", 
+        desc: "Chuyển đổi các PGH còn giá trị thành NFT và triển khai đăng ký thử nghiệm 'Sandbox' nhằm chuẩn bị cho bước phát triển mới." 
+      },
+      { 
+        year: "Q4-2026", 
+        title: "CEX/DEX - DAOs", 
+        desc: "Ra mắt hệ thống sàn giao dịch tập trung (CEX) và phi tập trung (DEX), kết hợp cùng mô hình quản trị cộng đồng DAOs." 
+      },
+      { 
+        year: "Q4-2027", 
+        title: "Hoàn thiện Hệ Sinh Thái", 
+        desc: "Mở rộng toàn diện Hệ Sinh Thái, tích hợp sản phẩm, giao dịch và cộng đồng vào một nền tảng thống nhất, bền vững." 
+      }
+    ]}
+  />
 
   <!-- HighlightedPosts Widget ******* -->
 

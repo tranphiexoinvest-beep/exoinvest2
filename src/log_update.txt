@@ -1,0 +1,14 @@
+28/08/2025
+    - Sửa một số nội dung trang home (index)
+        + Tiêu đề
+        + Tầm nhìn sứ mệnh
+        + Mô hình hoạt động
+    - Sửa một số lỗi chính tả đã phát hiện
+    - Sắp xếp lại vị trí hiển thị một số nội dung khi xem trên điện thoại (mobile)
+    - Thêm section "Lộ trình phát triển" trên trang home (index)
+    - Điều chỉnh tên 4/8 đơn vị trong hệ sinh thái
+        + EXO Wellnez -> EXO Welless
+        + EXO Tele-Welless -> EXO Mobi-Welless
+        + GlobeDr EDMEDICAL -> GlobeDr EDMEDICAL
+        + EXO Tech -> EXO Techno
+    

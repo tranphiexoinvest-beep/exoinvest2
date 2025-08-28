@@ -1,0 +1,183 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+
+const {
+  title = await Astro.slots.render('title') || "Roadmap",
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+  steps = [],
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`}
+  bg={bg}
+>
+  <!-- Title / Subtitle / Tagline -->
+  <Headline
+    title={title}
+    subtitle={subtitle}
+    tagline={tagline}
+    classes={classes?.headline as Record<string, string>}
+  />
+
+  <!-- Roadmap -->
+  <section class="relative w-full py-12">
+    <div class="relative ">
+      <!-- Prev -->
+      <button
+        id="roadmap-prev"
+        type="button"
+        class="absolute left-4 top-1/2 -translate-y-1/2 z-20 
+               bg-white border rounded-full p-3 shadow-lg hover:bg-gray-100 transition disabled:opacity-40 disabled:cursor-not-allowed"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Next -->
+      <button
+        id="roadmap-next"
+        type="button"
+        class="absolute right-4 top-1/2 -translate-y-1/2 z-20 
+               bg-white border rounded-full p-3 shadow-lg hover:bg-gray-100 transition disabled:opacity-40 disabled:cursor-not-allowed"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <!-- Steps -->
+      <div
+        id="roadmap-scroll"
+        class="relative overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth px-32"
+      >
+        <div class="relative flex items-center space-x-16 w-max pt-6 pb-6">
+          {steps.map((step, i) => (
+            <div class="relative flex-shrink-0 flex flex-col items-center min-w-[250px] snap-center">
+              
+              <!-- Year -->
+              <div class="mb-4">
+                <div class={`${classes?.panel ?? ''} rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-blue-100 dark:bg-slate-900 p-6'px-4 py-2 text-center w-[120px]`}>
+                  <span class="font-semibold">{step.year}</span>
+                </div>
+              </div>
+
+              <!-- Connector Year ↔ Dot -->
+              <div class="w-px h-4 bg-blue-200 
+                              -z-10 
+                              shadow-[0_0_5px_1px_rgba(59,130,246,0.5)]
+                              dark:bg-blue-300 
+                              dark:shadow-[0_0_10px_2px_rgba(96,165,250,0.8)]"></div>
+
+              <!-- Dot + line -->
+              <div class="relative flex items-center justify-center w-full">
+                <div class="w-6 h-6 bg-blue-500 rounded-full border-2 border-white z-20 
+                            shadow-[0_0_10px_2px_rgba(59,130,246,0.6)]
+                            dark:bg-blue-500 
+                              dark:shadow-[0_0_15px_3px_rgba(96,165,250,0.8)] ">
+                            </div>
+                {i < steps.length - 1 && (
+                  <div class="absolute left-1/2 top-1/2 
+                              w-[calc(200px+8rem)]
+                              sm:w-[calc(240px+8rem)] 
+                              md:w-[calc(280px+8rem)] 
+                              lg:w-[calc(360px+8rem)]  
+                              h-[2px] 
+                              bg-blue-200 
+                              -z-10 
+                              shadow-[0_0_5px_1px_rgba(59,130,246,0.5)]
+                              dark:bg-blue-300 
+                              dark:shadow-[0_0_10px_2px_rgba(96,165,250,0.8)]">
+                  </div>
+
+
+                )}
+              </div>
+
+              <div class="w-px h-6 bg-blue-200 
+                              -z-10 
+                              shadow-[0_0_5px_1px_rgba(59,130,246,0.5)]
+                              dark:bg-blue-300 
+                              dark:shadow-[0_0_10px_2px_rgba(96,165,250,0.8)]"></div>
+
+              <!-- Content -->
+              <div class="mt-4">
+                <div class={`${classes?.panel ?? ''} rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-blue-100 dark:bg-slate-900 
+                          w-[220px] h-[200px]
+                          sm:w-[240px] sm:h-[200px] 
+                          md:w-[280px] md:h-[200px] 
+                          lg:w-[360px] lg:h-[260px]"
+                          ext-justify p-4`}>
+                <h3 class="font-bold mb-2">{step.title}</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</WidgetWrapper>
+
+<!-- Script điều khiển nút (dán vào cuối component) -->
+<script>
+  // giữ kiểu ban đầu (có thể là null)
+  const scrollEl = document.getElementById("roadmap-scroll") as HTMLElement | null;
+  const prevBtn = document.getElementById("roadmap-prev") as HTMLButtonElement | null;
+  const nextBtn = document.getElementById("roadmap-next") as HTMLButtonElement | null;
+
+  // nếu bất kỳ phần tử nào bị thiếu thì dừng (tránh lỗi runtime/TS)
+  if (!scrollEl || !prevBtn || !nextBtn) {
+    // (tùy chọn) console.warn("Roadmap elements not found");
+  } else {
+    // gán lại thành các biến chắc chắn không-null với kiểu chính xác
+    const s: HTMLElement = scrollEl as HTMLElement;
+    const p: HTMLButtonElement = prevBtn as HTMLButtonElement;
+    const n: HTMLButtonElement = nextBtn as HTMLButtonElement;
+
+    // cập nhật trạng thái nút (dùng s, p, n — đã là non-null)
+    function updateButtons() {
+      const maxScroll = s.scrollWidth - s.clientWidth;
+      p.disabled = s.scrollLeft <= 0;
+      n.disabled = s.scrollLeft >= maxScroll - 10;
+      // nếu muốn ẩn hoàn toàn thay vì disable, dùng:
+      // p.style.display = p.disabled ? "none" : "flex";
+      // n.style.display = n.disabled ? "none" : "flex";
+    }
+
+    // click handlers
+    p.addEventListener("click", () => {
+      s.scrollBy({ left: -window.innerWidth * 0.8, behavior: "smooth" });
+    });
+    n.addEventListener("click", () => {
+      s.scrollBy({ left: window.innerWidth * 0.8, behavior: "smooth" });
+    });
+
+    // lắng nghe scroll & resize để cập nhật trạng thái nút
+    s.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
+
+    // initial state
+    updateButtons();
+  }
+</script>
+
+<style>
+  #roadmap-scroll {
+    -ms-overflow-style: none;  /* IE và Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  #roadmap-scroll::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari */
+  }
+</style>

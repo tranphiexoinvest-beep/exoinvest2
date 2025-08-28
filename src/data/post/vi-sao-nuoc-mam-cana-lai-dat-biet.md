@@ -1,7 +1,7 @@
 ---
 publishDate: 2023-08-06T00:00:00Z
 author: Khoa Phạm
-title: Vì sao nước mắm CANA lại đặt biệt
+title: Vì sao nước mắm CANA lại đặc biệt
 excerpt: Chắc hẳn ai trong chúng ta cũng từng nghe đến địa danh Cà Ná, một vùng biển nhỏ thuộc Ninh Thuận.
 image: "~/assets/images/blogs/bl2.jpg"
 category: Nước mắm CANA
